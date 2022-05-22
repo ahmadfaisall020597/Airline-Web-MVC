@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1088369c-eba6-47b9-8d83-5cfe7ffed855": {
+      "ProjectGuid": "1088369c-eba6-47b9-8d83-5cfe7ffed855",
+      "DisplayName": "BasicDotnet",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "d1ed19af-4f0b-4c2a-96f9-45c042ba8c5c": {
+      "ProjectGuid": "d1ed19af-4f0b-4c2a-96f9-45c042ba8c5c",
+      "DisplayName": "AirlineBookingMVC",
+      "ColorIndex": 1
+    },
+    "1c5cbf7a-0296-46ff-99ca-fe59f1ccfa0e": {
+      "ProjectGuid": "1c5cbf7a-0296-46ff-99ca-fe59f1ccfa0e",
+      "DisplayName": "AirlineBookingWebAPI",
+      "ColorIndex": 2
+    },
+    "b0af066d-a168-463c-ae6c-f3058fe17291": {
+      "ProjectGuid": "b0af066d-a168-463c-ae6c-f3058fe17291",
+      "DisplayName": "AirlineBooking",
+      "ColorIndex": 3
+    },
+    "bc267835-59a8-4f36-b4c8-1a8010105322": {
+      "ProjectGuid": "bc267835-59a8-4f36-b4c8-1a8010105322",
+      "DisplayName": "AirlineBooking.Test",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

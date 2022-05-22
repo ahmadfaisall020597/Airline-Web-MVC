@@ -1,0 +1,85 @@
+﻿-git
+-hello world -> console.WriteLine()
+-data types -> int, string, float, decimal, 
+-array -> []string, [], List -> candy crush  (looping, if)
+-methods -> searching
+
+pattern programming
+
+-models -> structure data -> chatbot
+-service -> perpus -> encapsulation models 
+
+-service model - LINQ
+-unit test ->
+-Exception ->error detection
+-service model -> database ->  Create, Update, Delete, FindByID, List()
+
+migration EF core (OK)
+seeding data (OK)
+
+transaction => ?
+sql manual
+
+
+pattern programming
+
+-bootstrap -> list view, details, input form, searching, sorting, dialog
+-controller -> POST, GET, PUT, DELETE
+-javascript -> 
+
+
+34/13 = 2.6 ~ 2.8
+
+-kecepatan mengajar => membuat anak-anak ngerti
+-target 26 sudah ujian => 
+
+
+1 thn / published => 
+100,000,000 => 1 => 10 => 100,000 programmer =>
+10 orang / 100,000 => 0,00001 %
+Perusahaan => psikotest, technical test, performance 
+PMO => 
+stress project =>  
+
+
+manajemen waktu => focus belajar 
+kerja => bangun 7, 8 => 9 -12 -13 - 18 => 19-20 (trus setiap hr)
+senin - jumat => sabtu minggu
+
+
+manajemen IQ, EQ, SQ
+mengalah & sabar & tekun (niat & kemauan)
+
+=======
+||    ||
+||    ||
+||    ||
+||    ||
+||    ||
+||    ||
+||    ||
+||    ||
+||    ||
+||    ||
+||    ||
+========
+
+manage problem
+===============================================================================================
+
+========= 
+========== 
+========== 
+===========
+===========
+===========
+===========
+=============
+=========
+===========
+==========
+==========
+==========
+===========
+===========
+============== 

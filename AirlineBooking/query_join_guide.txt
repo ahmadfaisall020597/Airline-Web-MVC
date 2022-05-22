@@ -1,0 +1,40 @@
+﻿=> inner join, left join, right join, full outer join
+
+
+SELECT
+
+	<main_table>.<field>
+
+	<join_table A>.<field>
+
+FROM
+
+<main_table> <alias>
+
+<jenis_join> <join table A> <alias>  ON <main_table/alias>.<field> = <join_table A/alias>.<foreign_key>
+
+
+<jenis_join> <join table B> <alias>  ON <main_table/alias/join_table_A>.<field> = <join_table B/alias>.<foreign_key>
+
+
+
+
+select 
+p.kode_penerbangan,
+p.kode_jenis_pesawat,
+p.kode_maskapai,
+
+kp.id_kursi_pesawat,
+kp.kode_penerbangan,
+kp.nomor_kursi,
+
+m.kode_maskapai,
+m.nama_maskapai,
+
+jp.kode_jenis_pesawat,
+jp.tahun_pesawat
+
+from pesawat p
+left join kursi_pesawat kp ON p.kode_penerbangan = kp.kode_penerbangan
+left join maskapai m ON p.kode_maskapai = m.kode_maskapai
+left join jenis_pesawat jp ON p.kode_jenis_pesawat = jp.kode_jenis_pesawat

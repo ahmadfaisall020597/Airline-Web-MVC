@@ -1,0 +1,363 @@
+﻿==========================
+AIRLINE BOOKING
+==========================
+TIKET SAYA
+==========================
+KODE BOOKING : UWTREY
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+MASKAPAI : Lion Air
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000/Orang
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+==========================
+#1. Mr. Fathan 071111111111
+#2. Ms. Nery 071111111112
+
+
+==========================
+BOOKING TIKET
+==========================
+ASAL : 
+TUJUAN : 
+TGL.BERANGKAT :
+1. ASAL
+2. TUJUAN
+3. TGL.BERANGKAT
+4. CARI TIKET
+5. KELUAR
+
+
+
+
+
+
+==========================
+ASAL AIRPORT
+==========================
+#1. CGK - Soekarno–Hatta (Banten/Tangerang)
+#2. DPS - Ngurah Rai (Bali/Denpasar)
+#3. SID - Juanda (Jawa Timur/Sidoarjo)
+#4. UPG - Sultan Hasanuddin (Sulawesi Selatan/Makassar)
+#5. KNO - Kualanamu (Sumatera Utaram/Deli Serdang)
+Pilih Nomor #: 1
+<jika kosong, kembali>
+
+
+==========================
+BOOKING TIKET
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : 
+TGL.BERANGKAT : 
+
+1. ASAL
+2. TUJUAN
+3. TGL.BERANGKAT
+4. CARI TIKET
+5. KELUAR
+
+
+==========================
+PILIH TUJUAN AIRPORT
+==========================
+#1. CGK - Bandar Udara Internasional Soekarno–Hatta (Banten/Tangerang)
+#2. DPS - Bandar Udara Internasional Ngurah Rai (Bali/Denpasar)
+#3. SID - Bandar Udara Internasional Juanda (Jawa Timur/Sidoarjo)
+#4. UPG - Bandar Udara Internasional Sultan Hasanuddin (Sulawesi Selatan/Makassar)
+#5. KNO - Bandar Udara Internasional Kualanamu (Sumatera Utaram/Deli Serdang)
+Pilih Nomor #: 2
+<jika sama, tampilkan pesan kota asal tidak boleh sama dengan kota tujuan>
+
+
+
+
+==========================
+BOOKING TIKET
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 
+
+1. ASAL
+2. TUJUAN
+3. TGL.BERANGKAT
+4. CARI TIKET
+5. KELUAR
+
+
+==========================
+TGL.BERANGKAT
+==========================
+MASUKKAN TANGGAL : 23-02-2022
+<kembali>
+
+==========================
+AIRLINE BOOKING
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+1. ASAL
+2. TUJUAN
+3. TGL.BERANGKAT
+4. CARI TIKET
+5. KELUAR
+
+
+
+==========================
+CARI TIKET
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+==========================
+#1. Maskapai : Lion Air
+Tgl : 23-02-2022
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+
+#2. Maskapai : Lion Air
+Tgl : 23-02-2022
+Jam : 09.30WIB - 11.00WIB
+Harga : Rp. 1,200,000
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+
+#3. Maskapai : Garuda Indonesia
+Tgl : 23-02-2022
+Jam : 7.30WIB - 8.30WIB
+Harga : Rp. 1,500,000
+Bagasi : 20Kg 
+
+Bagasi Kabin : 7Kg
+#4. Maskapai : Citilink
+Tgl : 23-02-2022
+Jam : 08.30WIB - 10.00WIB
+Harga : Rp. 1,500,000
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+
+#5. Maskapai : Citilink
+Tgl : 23-02-2022
+Jam : 10.30WIB - 12.00WIB
+Harga : Rp. 1,800,000
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+
+Pilih Nomor #:1
+<jika kosong, kembali>
+<jika tidak kosong, ke isi penumpang>
+
+
+==========================
+PENUMPANG
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+MASKAPAI : Lion Air
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000/Orang
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+==========================
+#1. Title [Mr/Mrs/Ms] : Mr
+Nama (Sesuai KTP) : Fathan
+KTP : 071111111111
+
+#1. Title [Mr/Mrs/Ms] : Ms
+Nama (Sesuai KTP) : Nery
+KTP : 071111111112
+
+==========================
+Rp. 1,000,000 x 2 Orang 
+Total : Rp 2,000,000
+==========================
+
+1. TAMBAH PENUMPANG
+2. HAPUS PENUMPANG
+3. BOOKING
+4. KEMBALI
+<jika lanjut ke halaman checkout booking>
+
+===========================
+TAMBAH PENUMPANG
+===========================
+Title [Mr/Mrs/Ms] : <title>
+Nama (Sesuai KTP) : <nama>
+KTP : <KTP>
+
+===========================
+HAPUS PENUMPANG
+===========================
+Nomor #: 1
+<jika kosong, kembali ke halaman penumpang>
+
+
+
+
+
+==========================
+CHECKOUT BOOKING
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+MASKAPAI : Lion Air
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000/Orang
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+==========================
+#1. Mr. Fathan 071111111111
+#2. Ms. Nery 071111111112
+==========================
+Rp. 1,000,000 x 2 Orang 
+Total : Rp 2,000,000
+==========================
+1. CHECKOUT BOOKING
+2. KEMBALI
+
+
+
+==========================
+PEMBAYARAN
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+MASKAPAI : Lion Air
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000/Orang
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+==========================
+#1. Mr. Fathan 071111111111
+#2. Ms. Nery 071111111112
+
+==========================
+Rp. 1,000,000 x 2 Orang 
+Total : Rp 2,000,000
+==========================
+
+1. PEMBAYARAN DENGAN KARTU KREDIT
+2. PEMBAYARAN CASH
+3. KEMBALI
+
+
+==========================
+PEMBAYARAN KARTU KREDIT
+==========================
+NOMOR KARTU KREDIT : <1456 7896 4562 1254>
+JUMLAH PEMBAYARAN : Rp. 2,000,000 (mengikuti total)
+
+==========================
+PEMBAYARAN CASH
+==========================
+JUMLAH PEMBAYARAN : Rp. 2,000,000 (mengikuti total)
+
+
+
+
+==========================
+CHECKOUT PEMBAYARAN
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+MASKAPAI : Lion Air
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000/Orang
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+==========================
+#1. Mr. Fathan 071111111111
+#2. Ms. Nery 071111111112
+
+==========================
+Rp. 1,000,000 x 2 Orang 
+Total : Rp 2,000,000
+==========================
+
+PEMBAYARAN : Cash
+
+1. CHECKOUT PEMBAYARAN
+2. KEMBALI
+
+
+
+==========================
+KODE BOOKING : UWTREY
+==========================
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+MASKAPAI : Lion Air
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000/Orang
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+==========================
+#1. Mr. Fathan 071111111111
+#2. Ms. Nery 071111111112
+
+1. CHECK IN
+2. KEMBALI (kembali ke halaman awal)
+
+
+
+==========================
+CHECK IN - PILIH NOMOR KURSI
+==========================
+    A  B  C      D  E  F
+#1 [x][ ][x]    [ ][ ][ ]
+#2 [x][ ][ ]    [ ][ ][ ]
+#3 [x][ ][x]    [ ][ ][ ]
+#4 [ ][x][ ]    [ ][ ][ ]
+#5 [ ][x][ ]    [ ][ ][ ]
+#6 [ ][x][ ]    [ ][ ][ ]
+#7 [x][ ][x]    [ ][ ][ ]
+#8 [x][ ][x]    [ ][ ][ ]
+#9 [ ][x][x]    [ ][ ][ ]
+
+[x] : Sudah Terisi
+[ ] : Kosong
+Nomor Kursi : <9F>
+
+
+
+==========================
+CHECK IN RESULT
+==========================
+KODE BOOKING : UWTREY
+KODE CHECKIN : 457821
+NOMOR PENERBANGAN : JT629
+NOMOR KURSI : 9F
+
+ASAL : CGK (Soekarno-Hatta)
+TUJUAN : DPS (Ngurah Rai)
+TGL.BERANGKAT : 23-02-2022
+
+MASKAPAI : Lion Air
+Jam : 07.30WIB - 09.00WIB
+Harga : Rp. 1,000,000/Orang
+Bagasi : 20Kg 
+Bagasi Kabin : 7Kg
+==========================
+#1. Mr. Fathan 071111111111
+#2. Ms. Nery 071111111112
+
+1. KEMBALI (kembali ke halaman awal)

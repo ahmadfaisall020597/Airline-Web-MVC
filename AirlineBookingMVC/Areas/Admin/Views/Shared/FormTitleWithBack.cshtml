@@ -1,0 +1,17 @@
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@model AirlineBookingMVC.Areas.Admin.ViewModels.Shared.FormTitleViewModelWithBack
+
+<div class="d-flex align-items-center">
+    <div>
+        <a class="btn"
+           asp-area="@Model.Area"
+           asp-action="@Model.BackAction"
+           asp-controller="@Model.Controller"
+           asp-route-t="@Model.t">
+            <i class="bi-arrow-left" style="font-size: 24px;"></i>
+        </a>
+    </div>
+    <div>
+        <h2>@Model.Title</h2>
+    </div>
+</div>

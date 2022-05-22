@@ -1,0 +1,28 @@
+﻿@model AirlineBookingMVC.Areas.Admin.ViewModels.JenisPesawat.ListJenisPesawatViewModel
+
+<table class="table table-responsive table-striped">
+    <thead>
+    <tr>
+        <th scope="col">
+        </th>
+        <th>Kode Jenis Pesawat</th>
+        <th>TahunPesawat</th>
+    </tr>
+    </thead>
+    <tbody >
+    @foreach (var item in Model.JenisPesawats)
+        {
+            <tr>
+                <th scope="row">
+                    <a class="btn btn-primary btn-select-jenis-pesawat"
+                       data-id="@item.KodeJenisPesawat">
+                        Pilih
+                    </a>
+                </th>
+
+                <td>@item.KodeJenisPesawat</td>
+                <td>@item.TahunPesawat</td>
+            </tr>
+        }
+    </tbody>
+</table>

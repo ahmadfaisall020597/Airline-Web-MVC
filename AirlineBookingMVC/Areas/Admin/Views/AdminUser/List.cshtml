@@ -1,0 +1,152 @@
+﻿@using AirlineBookingMVC.Areas.Admin.ViewModels.Shared
+@using System.Collections.Specialized
+@model AirlineBookingMVC.Areas.Admin.ViewModels.AdminUser.ListAdminUserViewModel
+
+@{
+    Layout = "_Layout";
+    var _formTitle = new FormTitleViewModelWithBack()
+    {
+        Title = "List Admin Pengguna",
+        Area = "Admin",
+        BackAction = "Create",
+        Controller = "AdminUser",
+        t = Model.t,
+    };
+
+}
+
+<partial name="FormTitleWithBack" model="_formTitle"/>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<partial name="MessageView" model="Model"/>
+
+<div class="d-lg-block d-md-block d-sm-none d-none">
+
+    <table class="table table-responsive table-striped">
+        <thead>
+        <tr>
+            <th scope="col">
+            </th>
+            <th></th>
+            <th>Email</th>
+            <th>Nama User</th>
+            <th>Aktif</th>
+            <th>Tgl.Buat</th>
+            <th>Dibuat oleh</th>
+            <th>Tgl.Ubah</th>
+            <th>Diubah oleh</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.AdminUsers)
+        {
+            <tr>
+                <th scope="row">
+                    <a asp-action="Edit"
+                       asp-area="Admin"
+                       asp-controller="AdminUser"
+                       asp-route-id="@item.Email"
+                       asp-route-t="@Model.t"
+                       class="btn btn-primary">
+                        Edit
+                    </a>
+                </th>
+                <td>
+                    <a class="btn btn-danger btn-delete"
+                       data-bs-toggle="modal"
+                       data-bs-target="#deleteConfirm"
+                       data-id="@item.Email">
+                        Delete
+                    </a>
+                </td>
+                <td>@item.Email</td>
+                <td>@item.Username</td>
+                <td>@item.Active</td>
+                <td>@item.CreatedAt</td>
+                <td>@item.CreatedBy</td>
+                <td>@item.UpdatedAt</td>
+                <td>@item.UpdatedBy</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>
+
+<div class="d-lg-none d-md-none d-sm-block d-block">
+
+    @foreach (var item in Model.AdminUsers)
+    {
+        <div class="card mb-4 rounded">
+
+
+            <div class="card-body">
+
+                <a asp-action="Edit"
+                   asp-area="Admin"
+                   asp-controller="AdminUser"
+                   asp-route-id="@item.Email"
+                   asp-route-t="@Model.t"
+                   class="text-decoration-none">
+                    <h5 class="card-title">@item.Email</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        Username : @item.Username
+                    </h6>
+
+                    <div class="card-text">
+                        Status : @item.Active
+                    </div>
+                    <div class="card-text">
+                        Dibuat pada : @item.CreatedAt, oleh: @item.CreatedBy
+                    </div>
+
+                    @if (item.UpdatedAt != null)
+                    {
+                        <div class="card-text">
+                            Diubah pada : @item.UpdatedAt, oleh: @item.UpdatedBy
+                        </div>
+                    }
+                </a>
+            </div>
+
+            <div class="card-footer">
+                <div class="d-flex flex-row-reverse">
+                    <button type="button"
+                            class="btn btn-danger btn-delete" data-bs-toggle="modal"
+                            data-bs-target="#deleteConfirm"
+                            data-id="@item.Email">
+                        <i class="bi-trash-fill"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function (){
+             $('.btn-delete').click(function() {                 
+                  /*alert($(this).data('id'));     */             
+                  $('.delete-id').val($(this).data('id'));
+                  
+             });
+        });
+    </script>
+}
+
+@{
+    var _deleteConfirmVM = new DeleteConfirmViewModel()
+    {
+        Action = "Delete",
+        Area = "Admin",
+        Controller = "AdminUser",
+        ID = "",
+        IDName = "Email",
+        t = @Model.t,
+    };
+}
+<partial name="DeleteConfirm" model="_deleteConfirmVM"/>

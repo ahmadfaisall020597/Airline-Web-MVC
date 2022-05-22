@@ -1,0 +1,21 @@
+﻿@model AirlineBookingMVC.Areas.Admin.ViewModels.Shared.FormTitleViewModel
+
+<div class="d-flex align-items-center">
+    <div>
+        <h2>@Model.Title</h2>
+    </div>
+    <div class="ms-auto">
+        <button type="submit" class="btn p-4">
+            <i class="bi-save" style="font-size: 24px;"></i>
+        </button>
+            
+        <a class="btn" 
+           asp-area="@Model.Area"
+           asp-action="@Model.Action"
+           asp-controller="@Model.Controller"
+           asp-route-t="@Model.t"
+        >
+            <i class="bi-alarm" style="font-size: 24px;"></i>
+        </a>
+    </div>
+</div>

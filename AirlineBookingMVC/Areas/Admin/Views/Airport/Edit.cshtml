@@ -1,0 +1,198 @@
+﻿@model AirlineBookingMVC.Areas.Admin.ViewModels.Airport.CreateAirportViewModel
+
+<div class="d-flex align-items-center">
+    <div>
+        <a asp-action="List"
+           asp-route-t="@Model.t"
+
+           class="btn" style="font-size:2rem;font-weight:bold;">
+            <i class="bi-arrow-left" style="font-size:2.5rem!important"></i>
+        </a>
+    </div>
+    <div>
+        <h1>Tambah Bandara</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        
+        <form asp-action="Update" id="FormUpdate">
+
+            <div style="display: flex; align-items: center;margin-bottom: 20px;">
+                <button class="btn btn-primary ms-2 btn-save"
+                        type="submit">
+                    <i class="bi-save"></i>
+                </button>
+
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="t" name="t"/>
+
+            <input type="hidden" name="ActionType" id="ActionType"/>
+
+            <div class="form-group">
+                <label asp-for="KodeAirport" class="control-label"></label>
+                <input asp-for="KodeAirport" class="form-control" readonly="readonly"/>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NamaAirport" class="control-label"></label>
+                <input asp-for="NamaAirport" class="form-control"/>
+                <span asp-validation-for="NamaAirport" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Kota" class="control-label"></label>
+                <input asp-for="Kota" class="form-control"/>
+                <span asp-validation-for="Kota" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Propinsi" class="control-label"></label>
+                <input asp-for="Propinsi" class="form-control"/>
+                <span asp-validation-for="Propinsi" class="text-danger"></span>
+            </div>
+
+            <a class="btn"
+               data-bs-toggle="modal" data-bs-target="#editAirportGatewayDialog">
+                <i class="bi-plus-circle" style="font-size: 24px;"></i>
+            </a>
+
+            <div class="d-lg-block d-md-block d-sm-none d-none">
+                <div>
+                    <table class="table table-responsive table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+
+                            </th>
+                            <th scope="col">Nomor Gate</th>
+                            <th scope="col">Nomor Pintu</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        @for (int i = 0; i < Model.Gateways.Count; i++)
+                        {
+                            var item = Model.Gateways[i];
+                            <tr>
+                                <th scope="row">
+                                    <a href="#" class="btn btn-delete-gate" data-index="@i">
+                                        <i class="bi-trash"></i>
+                                    </a>
+                                </th>
+                                <td>
+                                    @item.NomorGate
+                                    <input type="hidden" value="@item.NomorGate" name="Gateways[@i].NomorGate"/>
+                                </td>
+                                <td>
+                                    @item.NomorPintu
+                                    <input type="hidden" value="@item.NomorPintu" name="Gateways[@i].NomorPintu"/>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal fade" id="editAirportGatewayDialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        @*<form asp-action="AddGateway">*@
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Airport Gateway</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label asp-for="NomorGate" class="control-label"></label>
+                                <input asp-for="NomorGate" class="form-control" id="NomorGate"/>
+                                <span asp-validation-for="NomorGate" class="text-danger" id="NomorGateMsg"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="NomorPintu" class="control-label"></label>
+                                <input asp-for="NomorPintu" class="form-control" id="NomorPintu"/>
+                                <span asp-validation-for="NomorPintu" class="text-danger" id="NomorPintuMsg"></span>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-add-gateway">Tambah</button>
+                        </div>
+                        @*</form>*@
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        
+        const btnAddGateway = $('.btn-add-gateway');
+        const btnDeleteGateway = $('.btn-delete-gate');
+        
+        const nomorGate = $('#NomorGate');
+        const nomorPintu = $('#NomorPintu');
+        
+        const nomorGateMsg = $('#NomorGateMsg');
+        const nomorPintuMsg = $('#NomorPintuMsg');
+        
+        const form = $('#FormUpdate');
+        const actionType = $('input[name=ActionType]');
+        const btnSave = $('.btn-save');
+        
+        $(document).ready(function (){
+            
+            btnDeleteGateway.click(function (){                
+                $(this).parent().parent().remove()                
+            })
+            
+            function validateAddGateway () {
+                let valid = true
+                if (nomorGate.val() === ''){
+                    nomorGateMsg.text('Nomor Gate harus diisi')
+                    valid = false
+                }
+                
+                if (nomorPintu.val() === ''){
+                    nomorPintuMsg.text('Nomor Pintu harus diisi')
+                    valid = false
+                }
+                return valid
+            }
+            
+            btnAddGateway.click(() => {
+                actionType.val('AddGateway')
+            })
+                     
+            form.submit(function (){                
+                const _actionType = actionType.val();                
+                if (_actionType === 'AddGateway') {                    
+                    if (validateAddGateway()) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return true
+                }
+            })
+            
+            btnSave.click(function (){
+                actionType.val('');
+                
+            })
+        })
+    </script>
+}

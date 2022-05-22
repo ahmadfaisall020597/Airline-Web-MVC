@@ -1,0 +1,140 @@
+﻿view 
+	-> Console.WriteLine()
+	=> input => Console.ReadLine() , Console.ReadKey()
+	=> 
+
+helpers => MakeLine() => formatting line
+        => Padding => field, row
+		=> ID => unique ID
+
+
+ifelse, for, forEach, switch, => validasi, pengecekan
+
+
+methods => 
+<data type return> NamaMethod() {
+
+}
+
+return type => data type => int, string, decimal, float, bool
+[]int, []string, []decimal, []float, []bool
+List<int>, List<string>, List<decimal>
+
+Dictionary<key, value>
+
+
+OOP => {
+
+	access priviledge => private,public, protected
+	modifier => const, static, virtual, override
+
+
+	<access-privilegde> class <NamaClass> {
+		<access-privilegde> <modifier> <return datatype> <NamaMethod> {
+		}
+	}
+
+	layers pattern {
+
+		Class <NamaModel> {
+			- <data type> field 
+			- <data type> field 
+		}
+
+		Class <NamaService> {
+
+			- private List<Model>  => Database
+			- private Model
+			- private ServiceC  _serviceC;
+
+			#constructor method yang dipanggil pertama kali
+			<NamaService> (ServiceC serviceC) {
+				_serviceC = serviceC;
+			}
+
+			<return type> <NamaMethod> (string <input parameterA>, int <input  parameterB> ) {
+				- validasiInput(parameterA, parameterB)
+				- logika yang mengolah data di model
+				<return type>
+			}
+
+			validasiInput(string <input parameterA>, int <input  parameterB>) {
+				if() 
+				for()
+				foreach()
+
+			}
+
+			Add / Create(field-field yang isi manual) { 
+				#field otomatis seperti ID, created_date, created_by
+				- menambahkan data ke List data
+				_serviceC.MethodDariServiceC();
+			}
+
+			Update(string <key>, field-field isi manual) {
+				-update data berdasarkan key
+			}
+
+			Delete(<data type> <key>) {
+				Lakukan penghapusan data
+			}
+
+			FindList() {
+				//LINQ
+				return List<Model>
+			}
+
+			FindByID(<data type> id) {
+				//LINQ
+				List<Model>.Where(x=>x.id==id).First()
+			}
+
+			Search(string keyword) {
+			}
+
+		}
+
+	}
+
+
+	#return
+	List<ClassName> _objects 
+
+	#init class
+	ClassName objectClass = new ClassName();
+
+	#input parameters harus satu-satu atau detail;
+
+	Class <NamaView> {
+		public static <methodView() {
+
+		}
+	}
+
+
+
+	static Program {
+		
+		View 
+			->Services
+				-> Models
+	}
+
+	static Program(MVC) {		
+		MVC 
+			-> Controller
+					-Services
+						-Models
+					
+					-ViewModels
+					-View
+
+
+	}
+}
+
+Analisan Pembuatan OOP Service
+
+Model => Cari Kata Benda
+
+Service => Cari kata kerja

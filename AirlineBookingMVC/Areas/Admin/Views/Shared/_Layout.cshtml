@@ -1,0 +1,42 @@
+﻿@model AirlineBookingMVC.Areas.Admin.ViewModels.BaseViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AirlineBookingMVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AirlineBookingMVC.styles.css" asp-append-version="true"/>
+</head>
+<body>
+
+<partial name="TopMenu" />
+
+<main role="main" class="p-4 mb-4">
+    @RenderBody()
+</main>
+
+<partial name="Footer"/>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script src="~/js/config/AppConfig.js" asp-append-version="true"></script>
+<script src="~/js/shared/Format.js" asp-append-version="true"></script>
+<script src="~/js/shared/MessageBox.js" asp-append-version="true"></script>
+
+<script src="~/js/maskapai/MaskapaiLookup.js" asp-append-version="true"></script>
+<script src="~/js/pesawat/PesawatLookup.js" asp-append-version="true"></script>
+<script src="~/js/airport/AirportLookup.js" asp-append-version="true"></script>
+
+<script src="~/js/schedule/EditSchedule.js" asp-append-version="true"></script>
+<script src="~/js/schedule/ListSchedule.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,343 @@
+﻿@model AirlineBookingMVC.Areas.Admin.ViewModels.Pesawat.CreatePesawatViewModel
+
+@{
+    bool isCreate()
+    {
+        return ViewBag.FormMode == "Create";
+    }
+
+    string action()
+    {
+        return isCreate() ? "Insert" : "Update";
+    }
+}
+
+<div class="d-flex align-items-center">
+    <div>
+        <a asp-action="List"
+           asp-route-t="@Model.t"
+
+           class="btn" style="font-size:2rem;font-weight:bold;">
+            <i class="bi-arrow-left" style="font-size:2.5rem!important"></i>
+        </a>
+    </div>
+    <div>
+        @if (isCreate())
+        {
+            <h1>Tambah Pesawat</h1>    
+        }
+        else
+        {
+            <h1>Ubah Pesawat</h1>
+        }
+        
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <form asp-action="@action()"  id="FormInsert">
+
+            <div style="display: flex; align-items: center;margin-bottom: 20px;">
+                <button class="btn btn-primary ms-2 btn-save"
+                        type="submit">
+                    <i class="bi-save"></i>
+                </button>
+                
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="t" name="t"/>
+            
+            <input type="hidden" name="ActionType" id="ActionType"/>
+            
+            @if (isCreate())
+            {
+                <div class="form-group">
+                    <label asp-for="KodePenerbangan" class="control-label"></label>
+                    <input asp-for="KodePenerbangan" class="form-control" required="required"/>
+                </div>    
+            }
+            else
+            {
+                <div class="form-group">
+                    <label asp-for="KodePenerbangan" class="control-label"></label>
+                    <input asp-for="KodePenerbangan" class="form-control" required="required"
+                           readonly=""/>
+                </div>
+            }
+            
+            <div class="form-group">
+                <label asp-for="KodeJenisPesawat" class="control-label"></label>
+                <div class="d-flex align-items-center">
+                    <div>
+                        <input asp-for="KodeJenisPesawat" class="form-control"/>    
+                    </div>
+                    <div>
+                        <a type="button"
+                           href="#"
+                           class="btn btn-show-jenis-pesawat" 
+                           id="btnShowJenisPesawat">
+                            <i class="bi-search" style="font-size: 24px;"></i>
+                        </a>
+                        
+                        <div class="modal fade" id="jenisPesawatLookup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jenisPesawatLookupLabel">Cari Jenis Pesawat</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" id="bodyJenisPesawatLookup">
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <span asp-validation-for="KodeJenisPesawat" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="KodeMaskapai" class="control-label"></label>
+                
+                <div class="d-flex align-items-center">
+                    <div>
+                        <input asp-for="KodeMaskapai" class="form-control"/>    
+                    </div>
+                    <div>
+                       <a type="button"
+                          href="#"
+                          class="btn btn-show-maskapai" 
+                          id="btnShowMaskapai">
+                           <i class="bi-search" style="font-size: 24px;"></i>
+                       </a>
+                                               
+                    </div>
+                    
+                    <div class="modal fade" id="maskapaiLookup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="maskapaiLookupLabel">Cari Maskapai</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" id="bodyMaskapaiLookup">
+                                    
+                                    
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span asp-validation-for="KodeMaskapai" class="text-danger"></span>
+            </div>
+
+
+            <a class="btn"
+               data-bs-toggle="modal" data-bs-target="#editKursiPesawatDialog">
+                <i class="bi-plus-circle" style="font-size: 24px;"></i>
+            </a>
+
+            <div class="d-lg-block d-md-block d-sm-none d-none">
+                <div>
+                    <table class="table table-responsive table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+                            </th>
+                            <th scope="col">Nomor Kursi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        @for (int i = 0; i < Model.KursiPesawats.Count; i++)
+                        {
+                            var item = Model.KursiPesawats[i];
+                            <tr>
+                                <th scope="row">
+                                    <a href="#" class="btn btn-delete-kursi" data-index="@i">
+                                        <i class="bi-trash"></i>
+                                    </a>
+                                </th>
+                                <td>
+                                    @item.NomorKursi
+                                    <input type="hidden" value="@item.NomorKursi" name="KursiPesawats[@i].NomorKursi"/>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+             <div class="modal fade" id="editKursiPesawatDialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            @*<form asp-action="AddGateway">*@
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Kursi Pesawat</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+        
+                                    <div class="form-group">
+                                        <label asp-for="NomorKursi" class="control-label"></label>
+                                        <input asp-for="NomorKursi" class="form-control" id="NomorKursi"/>
+                                        <span asp-validation-for="NomorKursi" class="text-danger" id="NomorKursiMsg"></span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-add-kursi">Tambah</button>
+                                </div>
+                            @*</form>*@
+                        </div>
+                    </div>
+                </div>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        
+        const btnAddKursi = $('.btn-add-kursi');
+        const btnDeleteKursi = $('.btn-delete-kursi');
+        
+        const nomorKursi = $('#NomorKursi');
+        const nomorKursiMsg = $('#NomorKursiMsg');        
+        
+        const formInsert = $('#FormInsert');
+        const actionType = $('input[name=ActionType]');
+        const btnSave = $('.btn-save');
+        
+        const btnShowJenisPesawat = $('#btnShowJenisPesawat');
+        const lkpJenisPesawat = $('#jenisPesawatLookup');
+        const bodyJenisPesawatLookup = $('#bodyJenisPesawatLookup');
+        
+        const btnShowMaskapai = $('#btnShowMaskapai');
+        const lkpMaskapai = $('#maskapaiLookup');
+        const bodyMaskapaiLookup = $('#bodyMaskapaiLookup');
+        
+        $(document).ready(function (){
+            
+             nomorKursi.keypress(function (e){                 
+                 console.log(e.key)
+                 if (e.key === 'Enter') {
+                     e.preventDefault();
+                 }
+             })
+            
+             btnShowMaskapai.click(function(){               
+                            
+                debugger
+                const _t = '@Html.Raw(Model.t)';
+                $.ajax('/Admin/Maskapai/Lookup/' + _t,
+                { 
+                    success : function (d) {
+                        debugger
+                        bodyMaskapaiLookup.empty();                       
+                        bodyMaskapaiLookup.append(d);
+                        lkpMaskapai.modal('show');
+                        
+                        $('.btn-select-maskapai').click(function (){
+                            debugger
+                            const _kodeMaskapai = $(this).data('id');
+                            $('input[name=KodeMaskapai]').val(_kodeMaskapai)
+                            
+                            lkpMaskapai.modal('hide');
+                        })
+                    },
+                    error : function (e) {
+                        debugger
+                        console.log(e)
+                        
+                    }
+                })                  
+            })    
+            
+            
+            btnShowJenisPesawat.click(function(){               
+                
+                const _t = '@Html.Raw(Model.t)';
+                $.ajax('/Admin/JenisPesawat/Lookup/' + _t,
+                { 
+                    success : function (d) {
+                        bodyJenisPesawatLookup.empty();                       
+                        bodyJenisPesawatLookup.append(d);
+                        lkpJenisPesawat.modal('show');
+                        
+                        $('.btn-select-jenis-pesawat').click(function (){
+                            debugger
+                            const _kodePesawat = $(this).data('id');
+                            $('input[name=KodeJenisPesawat]').val(_kodePesawat)                            
+                            lkpJenisPesawat.modal('hide');
+                        })
+                    },
+                    error : function (e) {
+                        console.log(e)
+                        
+                    }
+                })                  
+            })            
+            
+            btnDeleteKursi.click(function (){                
+                $(this).parent().parent().remove()                
+            })
+            
+            function validateAddKursi () {
+                let valid = true
+                if (nomorKursi.val() === ''){
+                    nomorKursiMsg.text('Nomor Kursi harus diisi')
+                    valid = false
+                }                
+                return valid
+            }
+            
+            btnAddKursi.click(() => {
+                actionType.val('AddKursi')
+            })
+                     
+            formInsert.submit(function (){                
+                const _actionType = actionType.val();                
+                if (_actionType === 'AddKursi') {                    
+                    if (validateAddKursi()) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return true
+                }
+            })
+            
+            btnSave.click(function (){
+                actionType.val('');
+                
+            })
+            
+            $('#editKursiPesawatDialog').on('show.bs.modal', function () {
+               nomorKursi.val('');
+            })
+            
+           
+        })
+    </script>
+}

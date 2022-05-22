@@ -1,0 +1,28 @@
+﻿@model AirlineBookingMVC.Areas.Admin.ViewModels.Maskapai.ListMaskapaiViewModel
+
+<table class="table table-responsive table-striped">
+    <thead>
+    <tr>
+        <th scope="col">
+        </th>
+        <th>Kode Maskapai</th>
+        <th>Nama Maskapai</th>
+    </tr>
+    </thead>
+    <tbody >
+    @foreach (var item in Model.Maskapais)
+        {
+            <tr>
+                <th scope="row">
+                    <a class="btn btn-primary btn-select-maskapai"
+                       data-id="@item.KodeMaskapai">
+                        Pilih
+                    </a>
+                </th>
+
+                <td>@item.KodeMaskapai</td>
+                <td>@item.NamaMaskapai</td>
+            </tr>
+        }
+    </tbody>
+</table>

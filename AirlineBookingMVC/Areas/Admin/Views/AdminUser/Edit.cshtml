@@ -1,0 +1,51 @@
+﻿@using AirlineBookingMVC.Areas.Admin.ViewModels.Shared
+@model AirlineBookingMVC.Areas.Admin.ViewModels.AdminUser.EditAdminUserViewModel
+
+@{
+    
+    Layout = "_Layout";
+    var _formTitle = new FormTitleWithBackSaveViewModel()
+    {
+        Title = "Ubah Admin Pengguna",
+        Area = "Admin",
+        BackAction = "List",
+        Controller = "AdminUser",
+        t = Model.t,
+    };
+
+}
+
+<form asp-action="Update">
+
+    <partial name="FormTitleWithBackSave" model="_formTitle"/>
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <partial name="MessageView" model="Model"/>
+
+            <input type="hidden" asp-for="t" name="t"/>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" readonly="readonly"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" required/>
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="form-check ms-2">
+                <input class="form-check-input" asp-for="Active" type="checkbox"id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" asp-for="Active"></label>
+            </div>
+
+        </div>
+    </div>
+</form>

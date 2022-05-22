@@ -1,0 +1,172 @@
+﻿-cara menggunakan MSSQLServer Management Studio {
+
+	-buka MSSQL MStudio
+
+	#jika MSSQL diinstall di local computer
+	servername => <nama_server>\SQLEXPRESS 
+	              <ip_address>\SQLEXPRESS
+				  <localhost>\SQLEXPRESS
+				  <127.0.0.1>\SQLEXPRESS
+
+		#tambah \SQLEXPRESS karena menggunakan MSSQL versi SQLEXPRESS
+
+	#jika diinstall di server dan bukan versi SQLEXPRESS
+	servername => <ip_address>:<port> contoh: 192.168.1.2:1433
+	              <nama_domain_server>:<port>  contoh: dbserver.com:1433
+
+				  #default port : 1433
+				  kalau beda harus dispecify
+
+
+	jika install di local, ubah password sa
+		- login menggunakan Windows Authentication
+		- klik kanan pada server, pilih properties
+		- bagian security -> pada Server Authentication -> SQL Server and Windows Authentication
+
+		- di bawah node Server
+			- Databases
+			- Security
+				- Logins
+					-sa
+						klik kanan, properties
+						status => enabled login
+						general => ganti password baru => 123456
+
+	- di services.msc (windows)
+		restart SQL Server (SQLEXPRESS)
+
+
+	-connect ulang 
+	-login 
+
+	login type => SQL Server Authentication
+	login => sa  (local)
+	         <userID> (server perusahaan)
+
+	password => sesuai dengan user
+
+}
+
+
+- buat new Database {
+	pada:
+		-localhost\SQLEXPRESS
+			-Databases	
+				klik kanan, New Database
+				isi nama database, mis. AIRLINE_BOOKING
+
+
+}
+
+untuk penulisan nama table dan fields, harus menggunakan snake_case
+misal. 
+pesawat_tempur (v)
+PesawatTempur (tidak dianjurkan, karena untuk flexiblitas ganti database)
+
+- cara buat new table (table baru) {
+	pada:
+		-localhost\SQLEXPRESS
+			-Databases	
+				-AIRLINE_BOOKING
+					-Database diagrams
+					-Tables
+						klik kanan pada table, new table
+						isi nama kolumn, datatype, panjang kolumn, nullable, 
+						set primary key pada baris pertama
+
+						mapping C# datatypes thdp MSSQL data types
+						      C#                MSSQL
+							-long, Int64 =>     bigint
+							-string		  =>    nvarchar(30) = 30=>code
+							                                   50-60 => nama
+
+												varchar(60)
+										        text => content => panjang banget 
+
+							-int			=> int
+							-datetime		=> date (dateonly)  => 2022-02-23
+												time(7) (timeonly) => 15:02
+												datetime =>  2022-02-23 15:02:01
+
+							-bool			=> bit  (0 (false), 1 (true))
+
+							-decimal (x, precision), 
+							-double						=>  decimal (18, 2)
+							-float           => float  
+
+
+						save name table => schedule (pakai snake_case)            
+
+
+
+}
+
+- buat model <entity> di C#
+#di C#, CamelCase
+NamaClass
+NamaMethod => public
+namaMethod => protected / private firstLowerCase
+
+_namaField / _namaMethod => private  (boleh sesuai orang)
+
+[Table("nama_table")]
+Class ScheduleModel {
+	
+	[Key] => primary key
+	[Column(:"nama_field_table")]
+	public string ScheduleID { get; set; }
+}
+
+- Buat DbContext 
+	- Register DbSet<ScheduleModel> Schedules { get;set; }
+
+	tambahan onModelCreating() // => register entities
+	protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<ScheduleModel>();        
+    }
+
+
+- Bikin Service 
+	- constructor menerima parameter DbContext
+	- mulai bikin function service
+		mis. Create, Update, Delete, FindByID, FindList
+
+
+- Bikin Service Test
+	- fungsinya untuk menguji method/function dari service ang kita buat
+
+
+
+PK (untuk unique key dari rows, ID)
+INDEX (mempercepat searching)
+UNIQUE KEY (biasa untuk memvalidasi bbrrp field yg dianggap sebagai unique (a+b+c...))
+
+PK => UNIQUE
+Schedule
+
+KodeMaskapai => PK
+kol1 kol2 kol3
+--------------
+--------------
+--------------
+--------------
+--------------
+--------------
+
+contoh query
+
+insert into maskapai (kode_maskapai, nama_maskapai) values ('CTK','Citilink');
+insert into maskapai (kode_maskapai, nama_maskapai) values ('CTQ','Citilinq');
+
+select * from maskapai;
+
+delete from maskapai
+delete from maskapai where kode_maskapai='LR/JNI2'
+
+update maskapai
+set nama_maskapai='Lion'
+where kode_maskapai='LR/JNI'
+
+select * from maskapai where nama_maskapai like '%citi%'
+or kode_maskapai like '%CT%'

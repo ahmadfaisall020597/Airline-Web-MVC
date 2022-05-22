@@ -1,0 +1,119 @@
+﻿@model AirlineBookingMVC.Areas.Admin.ViewModels.BaseViewModel
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AirlineBookingMVC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark"
+                           asp-area="Admin"
+                           asp-controller="Home"
+                           asp-action="Index"
+                           asp-route-t="@Model.t">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Master Data
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="nav-link text-dark"
+                                   asp-area="Admin"
+                                   asp-action="Create"
+                                   asp-controller="Maskapai"
+                                   asp-route-t="@Model.t">
+                                    Maskapai
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark"
+                                   asp-area="Admin"
+                                   asp-controller="Airport"
+                                   asp-action="List"
+                                   asp-route-t="@Model.t">
+                                    Airport
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark"
+                                   asp-area="Admin"
+                                   asp-controller="JenisPesawat"
+                                   asp-action="List"
+                                   asp-route-t="@Model.t">
+                                    Jenis Pesawat
+                                </a>
+                            </li>
+                             <li>
+                                <a class="nav-link text-dark"
+                                   asp-area="Admin"
+                                   asp-controller="Pesawat"
+                                   asp-action="List"
+                                   asp-route-t="@Model.t">
+                                    Pesawat
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Transaksi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="nav-link text-dark"
+                                   asp-area="Admin"
+                                   asp-controller="Schedule"
+                                   asp-action="Index"
+                                   asp-route-t="@Model.t">
+                                    Jadwal
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark"
+                                   asp-area="Admin"
+                                   asp-controller="Airport"
+                                   asp-action="List"
+                                   asp-route-t="@Model.t">
+                                    Booking
+                                </a>
+                            </li>
+                            
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            User Management
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="nav-link text-dark"
+                                   asp-area="Admin"
+                                   asp-controller="Adminuser"
+                                   asp-action="Create"
+                                   asp-route-t="@Model.t">
+                                    Admin User
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

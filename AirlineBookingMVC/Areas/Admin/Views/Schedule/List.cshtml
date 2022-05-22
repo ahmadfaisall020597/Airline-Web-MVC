@@ -1,0 +1,61 @@
+﻿@using AirlineBookingMVC.Areas.Admin.ViewModels.Shared
+@model AirlineBookingMVC.Areas.Admin.ViewModels.BaseViewModel
+
+<div>
+    <h1>List Jadwal</h1>
+</div>
+
+
+<partial name="MessageView" model="Model"/>
+
+<div>
+    <a asp-area="Admin"
+       asp-action="Create"
+       asp-controller="Schedule"
+       asp-route-t="@Model.t"
+       class="btn btn-primary" id="btnAddSchedule">
+        Tambah Jadwal
+    </a>
+</div>
+
+<div class="d-lg-block d-md-block d-sm-none d-none">
+
+    <table class="table table-responsive table-striped">
+        <thead>
+        <tr>
+            <th scope="col">
+            </th>
+            <th>ID Jadwal</th>
+            <th>Kode Maskapai</th>
+            <th>Nama Maskapai</th>
+            <th>Kode Penerbangan</th>
+            <th>Kode Airport Asal</th>
+            <th>Nama Airport Asal</th>
+            <th>Kode Airport Tujuan</th>
+            <th>Nama Airport Tujuan</th>
+            <th>Tgl.Keberangkatan</th>
+            <th>Tgl.Kedatangan</th>
+            <th>Batas Bagasi</th>
+            <th>Batas Bagasi Kabin</th>
+            <th>Harga Tiket</th>
+            <th>Tgl.Buat</th>
+            <th>Dibuat oleh</th>
+            <th>Tgl.Ubah</th>
+            <th>Diubah oleh</th>
+        </tr>
+        </thead>
+        <tbody id="bodySchedules">
+
+        </tbody>
+    </table>
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">            
+        $(document).ready(function (){            
+            let _listSchedules = new ListSchedule(baseUrl, '@Html.Raw(Model.t)');            
+            _listSchedules.getListData();        
+        });
+    </script>
+}

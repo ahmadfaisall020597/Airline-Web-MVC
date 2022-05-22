@@ -1,0 +1,57 @@
+﻿5. Check In
+6. Check Out
+7. View Attendances
+
+======================================
+Check In
+======================================
+Masukkan Employee Code: E001
+
+cari employeeCode
+
+if not found
+	print Invalid Employee Code
+else 
+	Check In Time : 2022-02-14 08:00
+
+	masukkan data check in menggunakan Dictionary<string, string>
+	print "Checked In Succesfully"
+
+
+======================================
+Check Out
+======================================
+Masukkan Employee Code: E001
+
+cari employeeCode
+
+if not found
+	print Invalid Employee Code
+else 
+
+	Check In Time : 2022-02-14 12:00
+
+	masukkan data check in menggunakan Dictionary<string, string>
+	print "Checked Out Succesfully"
+
+
+======================================
+Attendances
+======================================
+Masukkan Employee Code: E001
+
+
+cari employeeCode
+
+if not found
+	print Invalid Employee Code
+else 
+	cari attendance dari Employee Code yang diinput
+	Duration = checkout time - checkin time (dalam hours)
+
+============================================================================
+EmployeeCode  |EmployeeName  |Checkin Time  |Checkout Time  | Duration 
+============================================================================
+E001		| Faisal		| 2022-02-14 08:00|  2022-02-14 12:00 | 4 hours
+E001		| Faisal		| 2022-02-15 08:00|  2022-02-15 11:00 | 3 hours
+E001		| Faisal		| 2022-02-16 08:00|  2022-02-15 10:00 | 2 hours

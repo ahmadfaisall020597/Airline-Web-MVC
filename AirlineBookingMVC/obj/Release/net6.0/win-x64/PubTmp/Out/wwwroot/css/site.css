@@ -1,0 +1,50 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.btn, .form-control {
+    border-radius:24px;
+}
+.control-label {
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.form-group {
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.btn-min-width {
+    min-width:125px;
+}
+
+.left-nav-item {
+    text-decoration: none;
+    color: #ffffff!important;
+    border-bottom:1px solid #b599e9;    
+}
+
+.bg-nav {
+    background-color: #6f42c1!important;
+}
+
+.field-validation-error {
+    margin-left: 10px!important;
+    margin-top: 20px!important;
+}

@@ -1,0 +1,220 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AirlineBookingMVC
+build_property.RootNamespace = AirlineBookingMVC
+build_property.ProjectDir = D:\bootcamp\netmvc\yudi-dotnet16\basic\BasicDotnet\AirlineBookingMVC\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\bootcamp\netmvc\yudi-dotnet16\basic\BasicDotnet\AirlineBookingMVC
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/AdminUser/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Vc2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/AdminUser/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Vc2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/AdminUser/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Vc2VyXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Airport/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlycG9ydFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Airport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlycG9ydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Error/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXJyb3JcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/DeleteConfirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXERlbGV0ZUNvbmZpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/FormTitle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEZvcm1UaXRsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/FormTitleWithBack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEZvcm1UaXRsZVdpdGhCYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/FormTitleWithBackSave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEZvcm1UaXRsZVdpdGhCYWNrU2F2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/MessageView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXE1lc3NhZ2VWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/SideNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFNpZGVOYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/TopMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFRvcE1lbnUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/Unauthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFVuYXV0aG9yaXplZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/Unlogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXFVubG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/_Layout_0.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRfMC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXExvZ2luXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/SideNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxTaWRlTmF2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/Unauthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxVbmF1dGhvcml6ZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/Unlogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxVbmxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/_Layout_0.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxfTGF5b3V0XzAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Bootstrap/Container.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdHN0cmFwXENvbnRhaW5lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Bootstrap/Grid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdHN0cmFwXEdyaWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Bootstrap/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdHN0cmFwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Bootstrap/Table.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdHN0cmFwXFRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/SideNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNpZGVOYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/Unauthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFVuYXV0aG9yaXplZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/Unlogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFVubG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/_Layout_0.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfMC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = X1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = X1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-tpmkwwfbdq
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Areas/Passenger/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFzc2VuZ2VyXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-nvspf5t76y
+
+[D:/bootcamp/netmvc/yudi-dotnet16/basic/BasicDotnet/AirlineBookingMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-brzw7dwkj8

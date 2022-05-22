@@ -1,0 +1,58 @@
+﻿@using AirlineBookingMVC.Areas.Admin.ViewModels.Shared
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model AirlineBookingMVC.Areas.Admin.ViewModels.JenisPesawat.CreateJenisPesawatViewModel
+
+@{
+    Layout = "_Layout";
+    var _formTitle = new FormTitleWithBackSaveViewModel()
+    {
+        Title = isCreate() ? "Buat Jenis Pesawat" : "Ubah Jenis Pesawat", 
+        Area = "Admin",
+        BackAction = "List",
+        Controller = "JenisPesawat",
+        t = Model.t,
+    };
+
+    bool isCreate()
+    {
+        return ViewBag.FormMode == "Create";
+    }
+}
+
+<form asp-action="@(isCreate() ? "Insert" : "Update")">
+
+   <partial name="FormTitleWithBackSave" model="_formTitle"/>
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <partial name="MessageView" model="Model"/>
+
+            <input type="hidden" asp-for="t" name="t"/>
+
+            <div class="form-group">
+                <label asp-for="KodeJenisPesawat" class="control-label"></label>
+                
+                @if(!isCreate()) {
+                    <input asp-for="KodeJenisPesawat" class="form-control" required readonly="readonly" />    
+                }
+                else
+                {
+                    <input asp-for="KodeJenisPesawat" class="form-control" required />
+                }
+                
+                <span asp-validation-for="KodeJenisPesawat" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TahunPesawat" class="control-label"></label>
+                <input asp-for="TahunPesawat" class="form-control" required/>
+                <span asp-validation-for="TahunPesawat" class="text-danger"></span>
+            </div>
+            
+        </div>
+    </div>
+</form>

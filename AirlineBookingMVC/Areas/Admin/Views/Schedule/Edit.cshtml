@@ -1,0 +1,161 @@
+﻿@model BaseViewModel
+@{
+    string getTitle()
+    {
+        if (ViewBag.FormMode == "edit")
+        {
+            return "Ubah Jadwal";
+        }
+        else
+        {
+            return "Buat Jadwal";
+        }
+    }
+}
+
+<h1>@getTitle()</h1>
+
+@*<form id="formEditSchedule">*@
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12 me-1">
+            
+            <div class="form-group">
+                <label class="control-label">Kode Maskapai</label>
+                <div class="d-flex">
+                    <div style="min-width: 200px;width: 300px">
+                        <input type="text" name="KodeMaskapai" class="form-control" required/>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary" id="btnFindMaskapai">
+                            <i class="bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="text-danger field-validation-error" id="KodeMaskapaiErr"></span>
+            </div>
+            
+            <div class="form-group">
+                <label class="control-label">Kode Penerbangan</label>
+                <div class="d-flex">
+                    <div style="min-width: 200px;width: 300px">
+                        <input type="text" name="KodePenerbangan" class="form-control" required/>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary" id="btnFindPesawat">
+                            <i class="bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="text-danger field-validation-error " id="KodePenerbanganErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Airport Asal</label>
+                <div class="d-flex">
+                    <div style="min-width: 200px;width: 300px">
+                        <input type="text" name="KodeAirportAsal" class="form-control" required/>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary" id="btnFindAirportAsal">
+                            <i class="bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="text-danger field-validation-error " id="KodeAirportAsalErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Airport Tujuan</label>
+                <div class="d-flex">
+                    <div style="min-width: 200px;width: 300px">
+                        <input type="text" name="KodeAirportTujuan" class="form-control" required/>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary" id="btnFindAirportTujuan">
+                            <i class="bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="text-danger field-validation-error " id="KodeAirportTujuanErr"></span>
+            </div>
+
+        </div>
+        
+        <div class="col-lg-2 col-md-3 col-sm-12">
+            
+            <div class="form-group">
+                <label class="control-label">Tgl Keberangkatan</label>
+                <input type="date" name="TglKeberangkatan" class="form-control" required/>
+                <span class="text-danger field-validation-error " id="TglKeberangkatanErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Jam Keberangkatan</label>
+                <input type="time" name="JamKeberangkatan" class="form-control" required/>
+                <span class="text-danger field-validation-error " id="JamKeberangkatanErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Tgl Kedatangan</label>
+                <input type="date" name="TglKedatangan" class="form-control" required/>
+                <span class="text-danger field-validation-error " id="TglKedatanganErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Jam Kedatangan </label>
+                <input type="time" name="JamKedatangan" class="form-control" required/>
+                <span class="text-danger field-validation-error " id="JamKedatanganErr"></span>
+            </div>
+            
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12 me-1" >
+
+            <div class="form-group">
+                <label class="control-label">Batas Bagasi</label>
+                <input type="number" name="BatasBagasi" class="form-control" required/>
+                <span class="text-danger field-validation-error " id="BatasBagasiErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Batas Bagasi Kabin</label>
+                <input type="number" name="BatasBagasiKabin" class="form-control" required/>
+                <span class="text-danger field-validation-error " id="BatasBagasiKabinErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" style="font-size: 24px" id="HargaTiketLabel">Harga Tiket</label>
+                <input type="number" name="HargaTiket" class="form-control" required/>
+                <span class="text-danger field-validation-error " id="HargaTikeErr"></span>
+            </div>
+            
+            <div class="form-group float-end">
+                <button type="button" class="btn btn-primary" id="btnSimpanJadwal">Simpan</button>
+            </div>
+            <div class="clearfix"></div>
+           
+        </div>
+            
+    </div>
+
+@*</form>*@
+
+
+<partial name="~/Areas/Admin/Views/Maskapai/MaskapaiLookup.cshtml"/>
+
+<partial name="~/Areas/Admin/Views/Pesawat/PesawatLookup.cshtml"/>
+
+<partial name="~/Areas/Admin/Views/Airport/AirportLookup.cshtml"/>
+
+<partial name="~/Areas/Admin/Views/Shared/MessageBox.cshtml"/>
+
+
+@section Scripts {
+    <script type="text/javascript">
+            
+        $(document).ready(function (){            
+            let _editSchedule = new EditSchedule(baseUrl, '@Html.Raw(Model.t)');            
+                    
+        });
+    </script>
+}

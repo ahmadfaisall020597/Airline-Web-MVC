@@ -1,0 +1,23 @@
+﻿============================================================================================
+Account Balance Histories
+============================================================================================
+Transaction Date | Customer Code  |  Customer Name  |   Transaction Amount 
+============================================================================================
+2022-02-11       | C001           |  Faisal         |   1,000,000 IDR
+2022-02-11       | C002           |  Vido			|   2,000,000 IDR
+2022-02-12       | C002           |  Vido			|  -500,000 IDR
+2022-02-12       | C003           |  Susanto        |   3,000,000 IDR
+2022-02-12       | C001           |  Faisal         |  -500,000 IDR
+2022-02-13       | C003           |  Susanto        |  -500,000 IDR
+
+============================================================================================
+Account Balance Summary
+============================================================================================
+Customer Code  |  Customer Name  |   Transaction Amount 
+============================================================================================
+C001           |  Faisal         |   500,000 IDR
+C002           |  Vido           |   1,500,000 IDR
+C003           |  Susanto        |   2,500,000 IDR
+
+Buatkan tampilan di atas menggunakan data types dan harus menggunakan array
+untuk summary harus dijumlah dari balance histories group berdasarkan Customer Code

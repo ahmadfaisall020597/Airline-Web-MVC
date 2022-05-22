@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Mj+F773DnWyMNa8u+QkQLSZ5G5nXdj8kt495gn4PAGo=",
+  "Source": "AirlineBookingWebAPI",
+  "BasePath": "_content/AirlineBookingWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

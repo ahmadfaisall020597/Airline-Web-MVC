@@ -1,0 +1,46 @@
+﻿@using AirlineBookingMVC.Areas.Admin.ViewModels.Shared
+@model AirlineBookingMVC.Areas.Admin.ViewModels.Maskapai.EditMaskapaiViewModel
+
+@{
+    
+    Layout = "_Layout";
+    var _formTitle = new FormTitleWithBackSaveViewModel()
+    {
+        Title = "Ubah Maskapai",
+        Area = "Admin",
+        BackAction = "List",
+        Controller = "Maskapai",
+        t = Model.t,
+    };
+
+}
+
+<form asp-action="Update">
+
+    <partial name="FormTitleWithBackSave" model="_formTitle"/>
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <partial name="MessageView" model="Model"/>
+
+            <input type="hidden" asp-for="t" name="t"/>
+
+            <div class="form-group">
+                <label asp-for="KodeMaskapai" class="control-label"></label>
+                <input asp-for="KodeMaskapai" class="form-control" readonly="readonly"/>
+                <span asp-validation-for="KodeMaskapai" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NamaMaskapai" class="control-label"></label>
+                <input asp-for="NamaMaskapai" class="form-control" required/>
+                <span asp-validation-for="NamaMaskapai" class="text-danger"></span>
+            </div>
+
+        </div>
+    </div>
+</form>

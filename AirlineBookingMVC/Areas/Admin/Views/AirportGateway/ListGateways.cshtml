@@ -1,0 +1,81 @@
+﻿@using AirlineBookingMVC.Areas.Admin.ViewModels.Shared
+@using log4net.Core
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Mvc.Filters
+@using AirlineBookingMVC.Areas.Admin.ViewModels.AirportGateway
+@model IEnumerable<AirlineBookingMVC.Areas.Admin.ViewModels.AirportGateway.EditAirportGatewayViewModel>;
+
+<h1>
+    List Gateways
+</h1>
+
+<div>
+    <a class="btn"
+       data-bs-toggle="modal" data-bs-target="#editAirportGatewayDialog">
+        <i class="bi-plus-circle" style="font-size: 24px;"></i>
+    </a>
+    @{
+        var _editGatewayVM = new EditAirportGatewayViewModel();
+        _editGatewayVM.NomorGate = "G1";
+        _editGatewayVM.NomorPintu = "A1";
+    }
+
+    <partial name="~/Areas/Admin/Views/AirportGateway/EditGateway.cshtml" model="_editGatewayVM" />
+</div>
+
+
+<div class="d-lg-block d-md-block d-sm-none d-none">
+    <div>
+        <table class="table table-responsive table-striped">
+            <thead>
+            <tr>
+                <th scope="col">
+                </th>
+                <th scope="col">Nomor Gate</th>
+                <th scope="col">Nomor Pintu</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">
+                        @*<a asp-action="Edit"
+                           asp-route-id="@item.KodeAirport"
+                           asp-route-t="@Model.t"
+
+                           class="btn btn-primary">
+                            Edit
+                        </a>
+                        <a class="btn btn-danger btn-delete"
+                           data-bs-toggle="modal"
+                           data-bs-target="#deleteConfirm"
+                           data-id="@item.KodeAirport">
+                            Delete
+                        </a>*@
+                    </th>
+                    <td>
+                        @item.NomorGate
+                    </td>
+                    <td>
+                        @item.NomorPintu
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="d-lg-none d-md-none d-sm-block d-block">
+    @foreach (var item in Model)
+    {
+        <div class="card mb-4 rounded">
+            <div class="card-body">
+                <h5 class="card-title">@item.NomorGate</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@item.NomorPintu</h6>
+            </div>
+
+        </div>
+    }
+</div>

@@ -1,0 +1,71 @@
+﻿
+===============================================================
+contexts
+===============================================================
+
+- salam (context)
+	dialogs:
+		-selamat pagi
+		-sore
+		-malam
+		-selamat petang
+		-selamat malam
+
+	responses:
+		-Selamat Pagi bapak / ibu, ada yang bisa dibantu ?
+		-Selamat Malam bapak / ibu, ada yang bisa dibantu ?
+
+
+- register karyawan baru
+	dialogs:
+		- mau nambahin karyawan
+		- add new employee
+
+	responses:
+		- masukkan kode karyawan
+		- emang situ dah diterima ?
+
+
+
+
+1. Add New Context
+2. Chat
+3. Exit
+
+
+
+=========================================
+Add Context
+=========================================
+
+Nama Context : <context_name>
+
+Loop Isi Dialog {
+	Masukkan Dialog <Tekan Escape> untuk keluar loop 
+}
+#jika escape, tapi dialog kosong, harus ulang loop 
+
+Loop Isi response : {
+	Masukkan Response <Tekan Escape> untuk keluar loop 
+}
+#jika escape, tapi resonse kosong, harus ulang loop 
+
+1. Save
+2. Cancel
+
+
+
+#pengambilan response cek per kata
+#kalau tidak ada, ambil random
+#hitung response, berdasarkan word count yang terbanyal
+
+
+====================================================================
+Chat
+=====================================================================
+Pagi
+					Selamat Pagi bapak / ibu, ada yang bisa dibantu ?			
+malam	
+					Selamat Malam bapak / ibu, ada yang bisa dibantu ?
+nambahin employee
+				    Masukkan Kode Karyawan

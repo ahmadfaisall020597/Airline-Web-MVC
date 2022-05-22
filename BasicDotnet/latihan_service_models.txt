@@ -1,0 +1,46 @@
+﻿text searching buku
+
+class buku A = {	
+
+	string bookName 
+	int rak : 1,	
+	List<Page> {
+		int page,
+		string content
+	}
+
+	page :1 {
+		A book is a medium for recording information in the form of writing or images, typicallycomposed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its predecessor, the scroll. A single sheet in a codex is a leaf and each side of a leaf is a page.
+		As an intellectual object, a book is prototypically a composition of such great length that it takes a considerable investment of time to compose and still considered as an investment of time to read. In a restricted sense, a book is a self-sufficient section or part of a longer composition, a usage reflecting that, in antiquity, long works had to be written on several scrolls and each scroll had to be identified by the book it contained. Each part of Aristotle's Physics is called a book. In an unrestricted sense, a book is the compositional whole of which such sections, whether called books or chapters or parts, are parts.
+		The intellectual content in a physical book need not be a composition, nor even be called a book. Books can consist only of drawings, engravings or photographs, crossword puzzles or cut-out dolls. In a physical book, the pages can be left blank or can feature an abstract set of lines to support entries, such as in an account book, an appointment book, an autograph book, a notebook, a diary or a sketchbook. Some physical books are made with pages thick and sturdy enough to support other physical objects, like a scrapbook or photograph album. Books may be distributed in electronic form as ebooks and other formats.
+		Although in ordinary academic parlance a monograph is understood to be a specialist academic work, rather than a reference work on a scholarly subject, in library and information science monograph denotes more broadly any non-serial publication complete in one volume (book) or a finite number of volumes (even a novel like Proust's seven-volume In Search of Lost Time), in contrast to serial publications like a magazine, journal or newspaper. An avid reader or collector of books is a bibliophile or colloquially, "bookworm". A place where books are traded is a bookshop or bookstore. Books are also sold elsewhere and can be borrowed from libraries. Google has estimated that by 2010, approximately 130,000,000 titles had been published.[2] In some wealthier nations, the sale of printed books has decreased because of the increased usage of ebooks.[3]
+	}
+
+	page : 2 {	
+		The novella as a literary genre began developing in the Italian literature of the early Renaissance, principally Giovanni Boccaccio, author of The Decameron (1353).[5] The Decameron featured 100 tales (named novellas) told by ten people (seven women and three men) fleeing the Black Death, by escaping from Florence to the Fiesole hills in 1348. This structure was then imitated by subsequent authors, notably the French queen Marguerite de Navarre, whose Heptaméron (1559) included 72 original French tales and was modeled after the structure of The Decameron.
+		The Italian genre novella grew out of a rich tradition of medieval short narrative forms. It took its first major form in the anonymous late 13th century Libro di novelle et di bel parlar gentile, known as the Novellino, and reached its culmination with The Decameron. Followers of Boccaccio such as Giovanni Fiorentino, Franco Sacchetti, Giovanni Sercambi and Simone de' Prodenzani continued the tradition into the early 15th century. The Italian novella influenced many later writers, including Shakespeare.[6]
+		Novellas were also written in Spain. Miguel de Cervantes book Novelas ejemplares (1613) added innovation to the genre with more attention to the depiction of human character and social background.[7]
+		Not until the late 18th and early 19th centuries did writers fashion the novella into a literary genre structured by precepts and rules, generally in a realistic mode. At that time, the Germans were the most active writers of the novelle (German: "Novelle"; plural: "Novellen").[7] For the German writer, a novella is a fictional narrative of indeterminate length—a few pages to hundreds—restricted to a single, suspenseful event, situation, or conflict leading to an unexpected turning point (Wendepunkt), provoking a logical but surprising end. Novellen tend to contain a concrete symbol, which is the narrative's focal point.[citation needed]
+		The novella influenced the development of the short story and the novel throughout Europe.[8] In the late 19th century Henry James was one of the first English language critics to use the term novella for a story that was longer and more complex than a short story, but shorter than a novel.[7]
+		In English speaking countries the modern novella is rarely defined as a distinct literary genre, but is often used as a term for a short novel.[9]	
+	}
+}
+
+Buku B : {
+	rak : 2,
+	page 1 {
+		...
+	}
+
+	page 2 {
+		...
+	}
+}
+
+
+Input : countries modern english novella rarely
+
+Rak : 1,
+Buku : A,
+Page : 2,
+Line : 6,

@@ -1,0 +1,9 @@
+﻿- pemindahan item antar lokasi
+- pemasukkan item 
+- pengeluaran item
+
+- master item
+- penggunaan item
+- proses items
+- result items
+

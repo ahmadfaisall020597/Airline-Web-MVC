@@ -1,0 +1,1 @@
+﻿const baseUrl = 'http://localhost:5250'

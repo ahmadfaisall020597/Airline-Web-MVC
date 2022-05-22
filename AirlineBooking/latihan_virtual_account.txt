@@ -1,0 +1,312 @@
+﻿latihan/final virtual account
+
+VirtualAccount {
+	virtualAccountID 
+	email
+	password
+	accountName
+	mobilphone
+	balance (saldo)
+}
+
+BankAccount {
+	BankAccountID
+	VirtualAccountID
+	BankID
+	BankAccountNumber
+	BankAccountOwner
+	Balance
+}
+
+
+(isi ulang)
+TopUp {
+	topUpID
+	virtualAccountID
+	topUpAmount
+	topUpDate
+	bankID
+	bankName
+	bankAccountNumber
+	bankAccountOwner	
+}
+
+(belanja)
+Transaction {
+	TransactionID
+	transactionDate
+	virtualAccountID (account buyer)
+	vaMerchantID (account merchant)
+	transactionAmount
+	referenceID
+}
+
+Transfer (transfer antar virtual account){
+	TransferID
+	TransferDate
+	fromVirtualAccountID
+	toVirtualAccountID
+	transferAmount
+}
+
+Withdraw {
+	withdrawID 
+	virtualAccountID
+	withdrawAmount
+	withdrawDate
+	bankID
+	bankName
+	bankAccountNumber
+	bankAccountOwner	
+}
+
+TransactionHistory {
+	historyID
+	accountID  (buyer account, merchant account )
+	transactionID  (topUpID, withdrawID, transferID, transactionID)
+	historyDate
+	amount  (transaction(-), topUp (+))
+	transactionType (topUp, withdraw, transfer, transaction)
+}
+
+
+Bank {
+	BankID
+	BankName
+}
+
+
+A => Buyer
+B => Merchant (Penjual)
+
+A ->TopUp 
+	-TransactionHistory (Buyer (+))
+	-Cek Apakah Balance bank account cukup or not
+	-Update Virtual Account Saldo
+
+A ->Withdraw 
+	-TransactionHistory (Buyer (-))
+	-Cek Apakah Balance Virtual Account cukup or not
+	-Update Virtual Account Saldo
+
+A ->Transaction
+	(2x tulis transaction history)
+	- TransactionHistory (Buyer (-))
+	- TransactionHistory (Merchant (+)) 
+	- Cek Balance buyer Virtual Account cukup or not
+	-Update Virtual Account Saldo
+
+A ->Transfer
+	(2x tulis transaction history)
+	- TransactionHistory (From (-))
+	- TransactionHistory (To (+))
+	- Cek Balance from Virtual Account cukup or not
+	- Update Virtual Account Saldo
+
+
+functions (services)
+- TopUp
+- Withdraw
+- Transfer (antar virtual account)
+- Transaction
+
+- Register (register virtual account, 
+	email
+	password
+	accountname)
+
+}
+
+screens {
+	- screen register
+
+	- screen login
+
+
+	- screen top up
+			- List History TopUp
+
+	- screen transaction (belanja)
+			- List History Transaction
+
+	- screen transfer
+			- List History Transfer
+
+	- screen withdraw
+			- List History Withdraw
+				
+	- screen history
+
+	- screen saldo 
+
+}
+
+
+
+
+
+-------------------
+register
+-------------------
+Email :
+Password :
+Confirm Password:
+MobilePhone:
+AccountName:
+
+========
+Save
+========
+
+
+-------------------
+Login
+-------------------
+Email : <email/mobilephone>
+Password :
+
+========
+|Login  |
+========
+
+
+Home
+-----------------------------------
+					 (H) (S) (L)  -> (H) transaction history
+-----------------------------------  (S) saldo
+                                     (L) logout
+
+
+	======     ===========      
+	TopUp      Transaction
+	======	   ===========
+
+	======     ===========      
+	Withdraw   Transfer
+	======	   ===========
+
+
+------------------------------
+
+
+-------------------
+TopUp           (H)
+-------------------
+Amount : 
+Bank :  <find>
+Bank Account Number :
+Bank Account Owner :
+========
+|TopUp  |
+========
+
+-------------------
+TopUp Histori    (H)
+-------------------
+AccountID |  Tgl.TopUp | Amount | Bank | Bank Acc.Number | Bank Acc.Owner |
+===========================================================================
+===========================================================================
+===========================================================================
+===========================================================================
+
+
+-------------------
+Find Bank    (H)
+-------------------
+         Bank | Bank Acc.Number | Bank Acc.Owner |
+[select]==========================================
+[select]==========================================
+[select]==========================================
+
+
+
+
+-------------------
+Transaction     (H)
+-------------------
+Merchant : <mobile/email> <-| enter, find ada ga accoun tsb
+Amount : 
+Reference : 
+========
+|Submit  |
+========
+
+-------------------
+Transaction Histori    (H)
+-------------------
+AccountID |  Tgl.Transaction | Merchant | Transaction Amount | Reference |
+===========================================================================
+===========================================================================
+===========================================================================
+===========================================================================
+
+
+
+
+-------------------
+Transfer     (H)
+-------------------
+To Account : <mobile/email> <-| enter, find ada ga accoun tsb
+To AccountID : 
+Transfer Amount : 
+========
+|Transfer |
+========
+
+-------------------
+Transfer Histori    (H)
+-------------------
+AccountID |  Tgl.Transfer | From Account ID | From Account Name | To Account ID | To Account Name  | Transfer Amount |
+======================================================================================================================
+======================================================================================================================
+======================================================================================================================
+======================================================================================================================
+
+
+
+
+-------------------
+Withdraw           (H)
+-------------------
+Amount : 
+Bank :  <find>
+Bank Account Number :
+Bank Account Owner :
+========
+|Withdraw |
+========
+
+-------------------
+Withdraw Histori    (H)
+-------------------
+AccountID |  Tgl.Withdraw | AccountID | AccountName | Amount | Bank | Bank Acc.Number | Bank Acc.Owner |
+========================================================================================================
+========================================================================================================
+========================================================================================================
+========================================================================================================
+
+
+
+
+---------------------------------------------------------------------------------
+Transaction Histori   
+---------------------------------------------------------------------------------
+AccountID |  Tgl.Histori | Account ID | Account Name | Amount | TransactionType
+================================================================================
+================================================================================
+================================================================================
+================================================================================
+
+
+
+-------------------
+Saldo
+-------------------
+Email :
+MobilePhone:
+AccountName:
+Saldo : 
+
+========
+Back
+========
